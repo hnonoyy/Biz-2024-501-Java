@@ -10,13 +10,21 @@ package com.callor.hello;
 
 public class HelloC {
 	public static void main(String[] args) {
+		/*
+		 * 이미 위에서 연산된 변수는 
+		 * 다시 변수값을 재지정하더라도 적용되지않는다.
+		 * 
+		 * 다만, 변수값을 재설정 후 아래에 다시 sum(연산값 입력한 변수)을 입력했을 경우 재설정된 값으로 출력된다.
+		 *  
+		 */
 		int num1 = 30;
 		int num2 = 40;
 		int sum = num1 + num2;
-
+		
 		num1 = 100;
 		num2 = 0;
 
+		//sum = num1 + num2; > 값은 100으로 나온다.
 		System.out.println(sum);
 	}
 }

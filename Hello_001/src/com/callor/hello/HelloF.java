@@ -11,6 +11,17 @@ package com.callor.hello;
 
 public class HelloF {
 	public static void main(String[] args) {
+		/*
+		 * HelloE와 같은 사칙연산이지만 
+		 * 변수를 이용하여 값을 계산해야 효율적으로 사용가능
+		 * 
+		 * 각각의 결과값을 변수에 지정하여 출력하도록 하며
+		 * 출력시 정규표현식 사용(포멧팅 / System.out.printf )
+		 * %d = 정수형 데이터
+		 * \n = 줄바꿈 
+		 * %f = 실수형 데이터
+		 *  - %(소수점 앞 몇번 째 자리값).(소수점 뒤 몇번 째 자리값)f => %.2f (소수점 두번 째 자리 값까지 보여주겠다.)
+		 */
 		int num1 = 30;
 		int num2 = 40;
 
