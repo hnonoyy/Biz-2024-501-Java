@@ -47,9 +47,22 @@ public class HelloG {
 		for (int i = 0; i < 100; i++) {
 			System.out.print(i + 1 + " ");
 			if ((i + 1) % 5 == 0) {
-				System.out.print("\n");
+				System.out.println();
 			}
 		}
+		
+
+		for (int i = 0; i < 100; i++) {
+			
+//			System.out.print(i+1);
+//			System.out.print(" ");
+			
+			System.out.printf("%d", i+1);
+			if ((i + 1) % 5 == 0) {
+				System.out.println();
+			}
+		}
+		
 		System.out.println("\n" + "=".repeat(30));
 
 		for (int i = 0; i < 100; i++) {
@@ -57,10 +70,13 @@ public class HelloG {
 
 			if (i + 1 < 100) {
 				System.out.print(" ");
-			}
-			if ((i + 1) % 5 == 0) {
-				System.out.print("\n");
+				if ((i + 1) % 5 == 0) {
+					System.out.print("\n");
+				}
 			}
 		}
+		/*
+		 * if문은 최소한으로 쓰는게 좋아서 첫번째 혹은 두번째 방법이 더 좋다.
+		 */
 	}
 }

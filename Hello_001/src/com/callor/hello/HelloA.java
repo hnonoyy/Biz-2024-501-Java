@@ -16,8 +16,6 @@ public class HelloA {
 		System.out.println(30 + 40);
 		System.out.println(30 + 40);
 
-		int n1 = 30;
-		int n2 = 40;
 	}
 
 }
