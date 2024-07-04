@@ -17,5 +17,7 @@ public class HelloI {
 			if((i+1) % 5 == 0) System.out.println() ;
 		}
 		// 단일 책임의 원칙
+		// 위에 for 문 처럼 각각 설정하는 것이 좋다.
+		// 할당하는 for 문 출력하는 for 문
 	}
 }

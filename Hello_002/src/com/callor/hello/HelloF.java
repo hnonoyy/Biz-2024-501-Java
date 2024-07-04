@@ -18,6 +18,8 @@ public class HelloF {
 		}
 
 		System.out.println("=".repeat(30));
+		// for 문 안에 설정하는 건 의미가 없음...
+		
 		int index;
 		for (index = 2; index < num; index++) {
 			if(num % index == 0) {

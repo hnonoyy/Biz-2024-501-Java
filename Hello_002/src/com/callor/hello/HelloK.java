@@ -3,6 +3,7 @@ package com.callor.hello;
 /*
  *  2~100까지 범위의 임의 Random 수 1개를 만들고
  *  그 수가 prime 인지 아닌지 판단 
+ *  prime : 1과 나 자신만 약수를 가지는 자연수
  */
 public class HelloK {
 

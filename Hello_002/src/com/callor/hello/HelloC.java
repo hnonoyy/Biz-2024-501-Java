@@ -5,6 +5,9 @@ package com.callor.hello;
  * 2의 배수이고, 3의 배수인 숫자만 나열하기
  * 		두가지 조건을 동시에 만족하는 결과값 찾기
  * 		두가지 조건을 &&(AND) 연산 수행
+ * 
+ * 자바에서 AND 연산은 앞에 조건이 맞지않으면 뒤에 조건은 고려하지않는다.
+ * 앞에 조건이 맞아야 뒤에 조건도 확인함
  */
 public class HelloC {
 	public static void main(String[] args) {

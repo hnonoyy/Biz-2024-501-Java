@@ -11,6 +11,7 @@ package com.callor.hello;
 public class HelloL {
 
 	public static void main(String[] args) {
+		
 		int[] arr = new int[50];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = (int) (Math.random() * 99 + 2);
@@ -24,10 +25,11 @@ public class HelloL {
 					break;
 				}
 			}
-			if (index > num) {
+			if (index == num) {
 				count++;
 				sum += num;
 			}
 		}
+		System.out.printf("배열에서 소수인 정수들의 합은 %d 이고, 소수의 개수는 %d 입니다.",sum ,count);
 	}
 }
