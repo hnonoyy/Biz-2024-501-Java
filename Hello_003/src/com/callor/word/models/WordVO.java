@@ -6,12 +6,12 @@ package com.callor.word.models;
 public class WordVO {
 
 	public String english;
-	public String korea;
+	public String korean;
 	
 	
 	@Override
 	public String toString() {
-		return "WordVo [english = " + english + ", korea = " + korea + "]";
+		return "WordVo [english = " + english + ", korean = " + korean + "]";
 	}
 	
 	

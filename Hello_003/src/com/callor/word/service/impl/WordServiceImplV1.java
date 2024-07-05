@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 import com.callor.word.models.WordVO;
 import com.callor.word.service.WordService;
+import com.callor.word.utils.Line;
 
 public class WordServiceImplV1 implements WordService {
 
@@ -28,18 +29,21 @@ public class WordServiceImplV1 implements WordService {
 	protected final List<WordVO> wordList;
 	protected final Scanner fileScan;
 
-	public WordServiceImplV1(String wordFile) {
+	/*
+	 * throws Exception
+	 * 만약 현재 method 에서 exception 이 발생하면
+	 * 나를 호출한 곳 (WordService 객체를 생성하는 곳)으로
+	 * exception 을 toss 한다. 
+	 */
+	public WordServiceImplV1(String wordFile) throws FileNotFoundException {
 		super();
 		this.wordFile = wordFile;
 		this.wordList = new ArrayList<>();
 		
 		InputStream fileInput = null;
-		try {
-			fileInput = new FileInputStream(wordFile);
-		} catch (FileNotFoundException e) {
-			System.out.println(wordFile + "파일을 불러올 수 없습니다.");
-		}
+		fileInput = new FileInputStream(wordFile);
 		fileScan = new Scanner(fileInput);
+		this.wordFileRead();
 	}
 	
 	/*
@@ -64,7 +68,7 @@ public class WordServiceImplV1 implements WordService {
 			
 			WordVO wordVO = new WordVO();
 			wordVO.english = lines[0];
-			wordVO.korea = lines[1];
+			wordVO.korean = lines[1];
 			
 			this.wordList.add(wordVO);
 		}
@@ -87,16 +91,25 @@ public class WordServiceImplV1 implements WordService {
 	
 	@Override
 	public void wordListPrint() {
+//		if(wordList.size() < 1) this.wordFileRead();
 		System.out.println("단어장 리스트");
-		System.out.println("=".repeat(30));
-		System.out.println("영문단어 한글번역");
-		System.out.println("-".repeat(30));
-		for(int i=0; i<wordList.size();i++) {
-			String eng = wordList.get(i).english;
-			String kor = wordList.get(i).korea;
-			System.out.println(eng + kor);
+		System.out.println(Line.dLine(50));
+		System.out.println("영문단어\t\t\t한글번역");
+		System.out.println(Line.sLine(50));
+		for(WordVO vo : wordList) {
+			System.out.printf("%s\t\t\t%s\n",vo.english,vo.korean);
 		}
-		System.out.println("=".repeat(30));
+//		for(int i=0; i<wordList.size();i++) {
+//			String eng = wordList.get(i).english;
+//			String kor = wordList.get(i).korean;
+//			System.out.println(eng +"\t\t\t"+ kor);
+//		}
+		System.out.println(Line.dLine(50));
+	}
+
+	@Override
+	public WordVO getWord() {
+		return null;
 	}
 
 }

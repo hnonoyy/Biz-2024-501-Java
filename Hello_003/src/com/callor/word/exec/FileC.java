@@ -18,7 +18,7 @@ public class FileC {
 		InputStream in = null;
 
 		// word.txt 파일을 Streaming 방식으로 열어서 뭔가 처리할 준비
-		try {
+		try { 
 			in = new FileInputStream(wordFile);
 		} catch (FileNotFoundException e) {
 //			e.printStackTrace();
@@ -36,7 +36,7 @@ public class FileC {
 			
 			WordVO wordVO = new WordVO();
 			wordVO.english = lines[0];
-			wordVO.korea = lines[1];
+			wordVO.korean = lines[1];
 			System.out.println(wordVO.toString());
 			
 		}
