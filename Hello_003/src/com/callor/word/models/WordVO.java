@@ -3,8 +3,16 @@ package com.callor.word.models;
 /*
  * 영어단어, 한글 풀이를 저장할 Data Class
  */
-public class WordVo {
+public class WordVO {
 
 	public String english;
 	public String korea;
+	
+	
+	@Override
+	public String toString() {
+		return "WordVo [english = " + english + ", korea = " + korea + "]";
+	}
+	
+	
 }

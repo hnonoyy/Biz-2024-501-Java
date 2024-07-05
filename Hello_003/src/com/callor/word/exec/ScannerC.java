@@ -48,5 +48,50 @@ public class ScannerC {
 			}
 			break;
 		}
+		while (true) {
+			System.out.print("영어 >> ");
+			String strEng = scan.nextLine();
+			try {
+				intEng = Integer.parseInt(strEng);
+				if (intEng < 0 || intEng > 100) {
+					System.out.println("점수는 0부터 100점까지만 입력하세요");
+					continue;
+				}
+			} catch (Exception e) {
+				System.out.println("영어 점수는 숫자로만 입력하세요");
+				continue;
+			}
+			break;
+		}
+		while (true) {
+			System.out.print("수학 >> ");
+			String strMath = scan.nextLine();
+			try {
+				intMath = Integer.parseInt(strMath);
+				if (intMath < 0 || intMath > 100) {
+					System.out.println("점수는 0부터 100점까지만 입력하세요");
+					continue;
+				}
+			} catch (Exception e) {
+				System.out.println("수학 점수는 숫자로만 입력하세요");
+				continue;
+			}
+			break;
+		}
+		System.out.println("=".repeat(30));
+		System.out.printf("학생이름 : %s\n", name);
+		System.out.printf("국어 : %d\n", intKor);
+		System.out.printf("영어 : %d\n", intEng);
+		System.out.printf("수학 : %d\n", intMath);
+		System.out.println("-".repeat(30));
+
+		intSum = intKor;
+		intSum += intEng;
+		intSum += intMath;
+		floatAvg = (float) intSum / 3;
+
+		System.out.printf("총점 : %d\n", intSum);
+		System.out.printf("평균 : %.2f\n", floatAvg);
+		System.out.println("=".repeat(30));
 	}
 }

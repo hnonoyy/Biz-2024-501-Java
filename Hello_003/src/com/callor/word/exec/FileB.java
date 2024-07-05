@@ -8,7 +8,7 @@ import java.util.Scanner;
 /*
  * word.txt 파일을 읽어서 파일의 내용을 화면에 출력하기
  */
-public class FileA {
+public class FileB {
 
 	public static void main(String[] args) {
 		String wordFile = "src/com/callor/word/word.txt";
@@ -30,7 +30,8 @@ public class FileA {
 		// for (int i = 0; scan.hasNext(); i++) {
 		while(scan.hasNext()) {
 			String line = scan.nextLine();
-			System.out.println(line);
+			String[] lines = line.split(":");
+			System.out.printf("영어 : %s , 번역 : %s\n",lines[0],lines[1]);
 		}
 
 	}

@@ -5,10 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Scanner;
 
+import com.callor.word.models.WordVO;
+
 /*
  * word.txt 파일을 읽어서 파일의 내용을 화면에 출력하기
  */
-public class FileA {
+public class FileC {
 
 	public static void main(String[] args) {
 		String wordFile = "src/com/callor/word/word.txt";
@@ -30,7 +32,13 @@ public class FileA {
 		// for (int i = 0; scan.hasNext(); i++) {
 		while(scan.hasNext()) {
 			String line = scan.nextLine();
-			System.out.println(line);
+			String[] lines = line.split(":");
+			
+			WordVO wordVO = new WordVO();
+			wordVO.english = lines[0];
+			wordVO.korea = lines[1];
+			System.out.println(wordVO.toString());
+			
 		}
 
 	}
